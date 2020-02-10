@@ -31,6 +31,10 @@ $(document).ready(function () {
         $("#myModal").modal();
     });
 });
+
 $(document).ready(function() {
-    $('#example').DataTable();
-} );
+    var table = $('#example').DataTable({
+        searchPanes: true,       
+    });
+    table.searchPanes.container().prependTo(table.table().container());
+});
